@@ -27,21 +27,30 @@
       <div class="grid grid-cols-3 gap-3 rounded-2xl">
         <div class="rounded p-[20px] bg-white max-sm:p-[12px]">
           <p class="text-[#323B49] text-[14px]">Total</p>
-          <p class="text-[#002C5C] font-bold text-[24px] max-sm:text-[20px]">
+          <p
+            id="total-count"
+            class="text-[#002C5C] font-bold text-[24px] max-sm:text-[20px]"
+          >
             0
           </p>
         </div>
 
         <div class="rounded p-[20px] bg-white max-sm:p-[12px]">
           <p class="text-[14px]">Interview</p>
-          <p class="text-[24px] text-[#10B981] font-bold max-sm:text-[20px]">
+          <p
+            id="interview-count"
+            class="text-[24px] text-[#10B981] font-bold max-sm:text-[20px]"
+          >
             0
           </p>
         </div>
 
         <div class="rounded p-[20px] bg-white max-sm:p-[12px]">
           <p class="text-[14px]">Rejected</p>
-          <p class="text-[#EF4444] font-bold text-[24px] max-sm:text-[20px]">
+          <p
+            id="rejected-count"
+            class="text-[#EF4444] font-bold text-[24px] max-sm:text-[20px]"
+          >
             0
           </p>
         </div>
@@ -55,7 +64,7 @@
           class="job-title flex justify-between mb-[24px]"
         >
           <p class="text-xl text-[#002C5C] font-semibold">Available Jobs</p>
-          <p class="text-[14px] text-[#64748B]">0 jobs</p>
+          <p id="job-count-text" class="text-[14px] text-[#64748B]">0 jobs</p>
         </div>
         <div id="btn-section" class="flex gap-2">
           <button
@@ -80,17 +89,17 @@
       </section>
       <section id="job-post" class="space-y-4 mb-[60px]">
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 Mobile First Corp
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 React Native Developer
               </p>
             </div>
@@ -106,7 +115,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -117,12 +126,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -131,24 +140,24 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
 
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 WebFlow Agency
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Web Designer & Developer
               </p>
             </div>
@@ -164,7 +173,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -175,12 +184,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -189,24 +198,24 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
 
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 DataViz Solutions
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Data Visualization Specialist
               </p>
             </div>
@@ -222,7 +231,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -233,12 +242,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -247,24 +256,24 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
 
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 CloudFirst Inc
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Backend Developer
               </p>
             </div>
@@ -280,7 +289,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -291,12 +300,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -305,24 +314,24 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
 
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 Innovation Labs
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 UI/UX Engineer
               </p>
             </div>
@@ -338,7 +347,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -350,12 +359,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -364,24 +373,24 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
 
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 MegaCorp Solutions
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 JavaScript Developer
               </p>
             </div>
@@ -397,7 +406,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -409,12 +418,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -423,24 +432,24 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
 
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 StartupXYZ
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Full Stack Engineer
               </p>
             </div>
@@ -456,7 +465,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -468,12 +477,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -482,24 +491,24 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
 
         <div
-          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
+          class="job-card flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
               <p
-                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+                class="company-name text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
               >
                 TechCorp Industries
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+              <p class="job-title-text text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Senior Frontend Developer
               </p>
             </div>
@@ -515,7 +524,7 @@
             </div>
             <div>
               <button
-                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+                class="status-btn px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
               >
                 NOT APPLIED
               </button>
@@ -527,12 +536,12 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+                class="interview-action-btn border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
               >
                 INTERVIEW
               </button>
               <button
-                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+                class="rejected-action-btn border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
               >
                 REJECTED
               </button>
@@ -541,12 +550,13 @@
           <!-- right element -->
           <div class="shrink-0">
             <img
-              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              class="delete-btn w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
             />
           </div>
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
