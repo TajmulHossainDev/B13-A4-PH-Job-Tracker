@@ -17,29 +17,38 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-gray-100">
-    <header id="header" class="w-[80%] mx-auto mt-[60px] mb-[30px]">
+    <header
+      id="header"
+      class="w-[80%] mx-auto mt-[60px] mb-[30px] max-sm:w-[95%] max-sm:mt-[30px] max-sm:mb-[20px]"
+    >
       <h1 class="text-2xl mb-[15px] text-[#002C5C] font-bold">
         Job Application Tracker
       </h1>
       <div class="grid grid-cols-3 gap-3 rounded-2xl">
-        <div class="rounded p-[20px] bg-white">
+        <div class="rounded p-[20px] bg-white max-sm:p-[12px]">
           <p class="text-[#323B49] text-[14px]">Total</p>
-          <p class="text-[#002C5C] font-bold text-[24px]">0</p>
+          <p class="text-[#002C5C] font-bold text-[24px] max-sm:text-[20px]">
+            0
+          </p>
         </div>
 
-        <div class="rounded p-[20px] bg-white">
+        <div class="rounded p-[20px] bg-white max-sm:p-[12px]">
           <p class="text-[14px]">Interview</p>
-          <p class="text-[24px] text-[#10B981] font-bold">0</p>
+          <p class="text-[24px] text-[#10B981] font-bold max-sm:text-[20px]">
+            0
+          </p>
         </div>
 
-        <div class="rounded p-[20px] bg-white">
+        <div class="rounded p-[20px] bg-white max-sm:p-[12px]">
           <p class="text-[14px]">Rejected</p>
-          <p class="text-[#EF4444] font-bold text-[24px]">0</p>
+          <p class="text-[#EF4444] font-bold text-[24px] max-sm:text-[20px]">
+            0
+          </p>
         </div>
       </div>
     </header>
-    <hr class="w-[80%] mx-auto text-[#E6E7E9] mb-[30px]" />
-    <main class="w-[80%] mx-auto">
+    <hr class="w-[80%] mx-auto text-[#E6E7E9] mb-[30px] max-sm:w-[95%]" />
+    <main class="w-[80%] mx-auto max-sm:w-[95%]">
       <section id="all-btn" class="mb-[16px]">
         <div
           id="available-job"
@@ -50,7 +59,7 @@
         </div>
         <div id="btn-section" class="flex gap-2">
           <button
-            id="all-btn"
+            id="filter-all-btn"
             class="bg-[#3B82F6] text-white py-[8px] px-[12px] rounded text-[12px]"
           >
             All
@@ -71,27 +80,29 @@
       </section>
       <section id="job-post" class="space-y-4 mb-[60px]">
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 Mobile First Corp
               </p>
               <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
                 React Native Developer
               </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>Remote</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Full-time</li>
-                  <li>$130,000- $175,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Full-time</li>
+                <li>$130,000- $175,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -118,7 +129,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
@@ -127,25 +138,29 @@
         </div>
 
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 WebFlow Agency
               </p>
-              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium"></p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                Web Designer & Developer
+              </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>Los Angeles, CA</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Part-time</li>
-                  <li>$80,000- $120,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Part-time</li>
+                <li>$80,000- $120,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -172,7 +187,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
@@ -181,27 +196,29 @@
         </div>
 
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 DataViz Solutions
               </p>
               <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Data Visualization Specialist
               </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>Boston, MA</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Full-time</li>
-                  <li>$125,000- $165,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Full-time</li>
+                <li>$125,000- $165,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -228,7 +245,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
@@ -237,27 +254,29 @@
         </div>
 
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 CloudFirst Inc
               </p>
               <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Backend Developer
               </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>Seattle, WA</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Full-time</li>
-                  <li>$140,000- $190,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Full-time</li>
+                <li>$140,000- $190,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -284,7 +303,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
@@ -293,27 +312,29 @@
         </div>
 
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 Innovation Labs
               </p>
               <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
                 UI/UX Engineer
               </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>Austin, TX</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Full-time</li>
-                  <li>$110,000- $150,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Full-time</li>
+                <li>$110,000- $150,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -341,7 +362,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
@@ -350,27 +371,29 @@
         </div>
 
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 MegaCorp Solutions
               </p>
               <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
                 JavaScript Developer
               </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>New York, NY</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Full-time</li>
-                  <li>$130,000- $170,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Full-time</li>
+                <li>$130,000- $170,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -398,7 +421,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
@@ -407,27 +430,29 @@
         </div>
 
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 StartupXYZ
               </p>
               <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Full Stack Engineer
               </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>Remote</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Full-time</li>
-                  <li>$120,000- $160,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Full-time</li>
+                <li>$120,000- $160,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -455,7 +480,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
@@ -464,27 +489,29 @@
         </div>
 
         <div
-          id="post-card"
-          class="flex justify-between bg-white p-[24px] rounded-xl"
+          class="flex justify-between bg-white p-[24px] rounded-xl max-sm:p-[16px]"
         >
           <!-- left element -->
           <div>
             <div>
-              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+              <p
+                class="text-[#002C5C] text-2xl mb-[4px] font-semibold max-sm:text-[18px]"
+              >
                 TechCorp Industries
               </p>
               <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
                 Senior Frontend Developer
               </p>
             </div>
-            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+            <div
+              class="flex gap-7 text-[#64748B] mb-[20px] text-[14px] max-sm:flex-wrap max-sm:gap-5"
+            >
               <p>San Francisco, CA</p>
-              <div class="">
-                <ul class="flex gap-6 list-disc">
-                  <li>Full-time</li>
-                  <li>$130,000- $175,000</li>
-                </ul>
-              </div>
+
+              <ul class="flex gap-6 list-disc max-sm:gap-5">
+                <li>Full-time</li>
+                <li>$130,000- $175,000</li>
+              </ul>
             </div>
             <div>
               <button
@@ -512,7 +539,7 @@
             </div>
           </div>
           <!-- right element -->
-          <div class="">
+          <div class="shrink-0">
             <img
               class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
               src="Trash.png"
