@@ -1,270 +1,525 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Application Tracker</title>
     <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- external css link -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- tailwindcss link -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script
-</head>
-<body class="bg-gray-100">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100">
     <header id="header" class="w-[80%] mx-auto mt-[60px] mb-[30px]">
-        <h1 class="text-2xl mb-[15px] text-[#002C5C] font-bold">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-3 rounded-2xl">
-            <div class="rounded p-[20px] bg-white">
-                <p class="text-[#323B49] text-[14px]">Total</p>
-                <p class="text-[#002C5C] font-bold text-[24px]">0</p>
-            </div>
-
-            <div class="rounded p-[20px] bg-white">
-                <p class="text-[14px]">Interview</p>
-                <p class="text-[24px] text-[#10B981] font-bold">0</p>
-            </div>
-
-            <div class="rounded p-[20px] bg-white">
-                <p class="text-[14px]">Rejected</p>
-                <p class="text-[#EF4444] font-bold text-[24px]">0</p>
-            </div>
+      <h1 class="text-2xl mb-[15px] text-[#002C5C] font-bold">
+        Job Application Tracker
+      </h1>
+      <div class="grid grid-cols-3 gap-3 rounded-2xl">
+        <div class="rounded p-[20px] bg-white">
+          <p class="text-[#323B49] text-[14px]">Total</p>
+          <p class="text-[#002C5C] font-bold text-[24px]">0</p>
         </div>
+
+        <div class="rounded p-[20px] bg-white">
+          <p class="text-[14px]">Interview</p>
+          <p class="text-[24px] text-[#10B981] font-bold">0</p>
+        </div>
+
+        <div class="rounded p-[20px] bg-white">
+          <p class="text-[14px]">Rejected</p>
+          <p class="text-[#EF4444] font-bold text-[24px]">0</p>
+        </div>
+      </div>
     </header>
-    <hr class="w-[80%] mx-auto text-[#E6E7E9]">
+    <hr class="w-[80%] mx-auto text-[#E6E7E9] mb-[30px]" />
     <main class="w-[80%] mx-auto">
-        <section id="all-btn" class="mb-[16px]">
-            <div id="available-job" class="job-title flex justify-between mb-[24px]">
-                <p class="text-xl text-[#002C5C] font-semibold">Available Jobs</p>
-                <p class="text-[14px] text-[#64748B]">0 jobs</p>
+      <section id="all-btn" class="mb-[16px]">
+        <div
+          id="available-job"
+          class="job-title flex justify-between mb-[24px]"
+        >
+          <p class="text-xl text-[#002C5C] font-semibold">Available Jobs</p>
+          <p class="text-[14px] text-[#64748B]">0 jobs</p>
+        </div>
+        <div id="btn-section" class="flex gap-2">
+          <button
+            id="all-btn"
+            class="bg-[#3B82F6] text-white py-[8px] px-[12px] rounded text-[12px]"
+          >
+            All
+          </button>
+          <button
+            id="interview-btn"
+            class="bg-white text-[#64748B] py-[8px] px-[12px] rounded text-[12px]"
+          >
+            Interview
+          </button>
+          <button
+            id="rejected-btn"
+            class="bg-white text-[#64748B] py-[8px] px-[12px] rounded text-[12px]"
+          >
+            Rejected
+          </button>
+        </div>
+      </section>
+      <section id="job-post" class="space-y-4 mb-[60px]">
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                Mobile First Corp
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                React Native Developer
+              </p>
             </div>
-            <div id="btn-section" class="flex gap-2">
-                <button id="all-btn" class="bg-[#3B82F6] text-white py-[8px] px-[12px] rounded text-[12px]">All</button>
-                <button id="interview-btn" class="bg-white text-[#64748B] py-[8px] px-[12px] rounded text-[12px]">Interview</button>
-                <button id="rejected-btn" class="bg-white text-[#64748B] py-[8px] px-[12px] rounded text-[12px]">Rejected</button>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>Remote</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Full-time</li>
+                  <li>$130,000- $175,000</li>
+                </ul>
+              </div>
             </div>
-        </section>
-        <section id="job-post" class="space-y-4">
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
             </div>
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
 
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                WebFlow Agency
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium"></p>
             </div>
-
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>Los Angeles, CA</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Part-time</li>
+                  <li>$80,000- $120,000</li>
+                </ul>
+              </div>
             </div>
-
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                Create stunning web experiences for high-profile clients. Must
+                have portfolio and experience with modern web design trends.
+              </p>
             </div>
-
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
             </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
 
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                DataViz Solutions
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                Data Visualization Specialist
+              </p>
             </div>
-
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>Boston, MA</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Full-time</li>
+                  <li>$125,000- $165,000</li>
+                </ul>
+              </div>
             </div>
-
-            <div id="post-card" class="flex justify-between bg-white p-3 rounded">
-                <!-- left element -->
-                <div>
-                    <div>
-                        <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">Mobile First Corp</p>
-                        <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">React Native Developer</p>
-                    </div>
-                    <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
-                        <p>Remote</p>
-                        <li>Full-time</li>
-                        <li>$130,000- $175,000</li>
-                    </div>
-                    <div>
-                        <button class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]">NOT APPLIED</button>
-                        <p class="text-[#323B49] text-[14px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]">INTERVIEW</button>
-                        <button class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]">REJECTED</button>
-                    </div>
-                </div>
-                <!-- right element -->
-                <div class="">
-                    <img class=" w-[32px] h-[32px] border border-[#F1F2F4]  rounded-full p-2" src="Trash.png">
-                </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                Transform complex data into compelling visualizations. Required
+                skills: D3.js, React, and strong analytical thinking.
+              </p>
             </div>
-            
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
 
-        </section>
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                CloudFirst Inc
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                Backend Developer
+              </p>
+            </div>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>Seattle, WA</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Full-time</li>
+                  <li>$140,000- $190,000</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                Design and maintain scalable backend systems using Python and
+                AWS. Work with modern DevOps practices and cloud infrastructure.
+              </p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
+
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                Innovation Labs
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                UI/UX Engineer
+              </p>
+            </div>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>Austin, TX</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Full-time</li>
+                  <li>$110,000- $150,000</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                Create beautiful and functional user interfaces for our suite of
+                products. Strong design skills and frontend development
+                expertise required.
+              </p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
+
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                MegaCorp Solutions
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                JavaScript Developer
+              </p>
+            </div>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>New York, NY</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Full-time</li>
+                  <li>$130,000- $170,000</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                Build enterprise applications with JavaScript and modern
+                frameworks. We offer competitive compensation, health insurance,
+                and professional development opportunities.
+              </p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
+
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                StartupXYZ
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                Full Stack Engineer
+              </p>
+            </div>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>Remote</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Full-time</li>
+                  <li>$120,000- $160,000</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                Join our fast-growing startup and work on our core platform.
+                Experience with Node.js and React required. Great benefits and
+                equity package included.
+              </p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
+
+        <div
+          id="post-card"
+          class="flex justify-between bg-white p-[24px] rounded-xl"
+        >
+          <!-- left element -->
+          <div>
+            <div>
+              <p class="text-[#002C5C] text-2xl mb-[4px] font-semibold">
+                TechCorp Industries
+              </p>
+              <p class="text-[#64748B] mb-[20px] text-[16px] font-medium">
+                Senior Frontend Developer
+              </p>
+            </div>
+            <div class="flex gap-7 text-[#64748B] mb-[20px] text-[14px]">
+              <p>San Francisco, CA</p>
+              <div class="">
+                <ul class="flex gap-6 list-disc">
+                  <li>Full-time</li>
+                  <li>$130,000- $175,000</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                class="px-[12px] py-[8px] bg-[#EEF4FF] text-[#002C5C] font-semibold mb-[8px] text-[14px]"
+              >
+                NOT APPLIED
+              </button>
+              <p class="text-[#323B49] text-[14px] mb-[20px]">
+                We are looking for an experienced Frontend Developer to build
+                scalable web applications using React and TypeScript. You will
+                work with a talented team on cutting-edge projects.
+              </p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="border-1 border-[#10B981] rounded text-[#10B981] py-[8px] px-[12px] text-[14px]"
+              >
+                INTERVIEW
+              </button>
+              <button
+                class="border-1 border-[#EF4444] rounded text-[#EF4444] font-semibold py-[8px] px-[12px] text-[14px]"
+              >
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <!-- right element -->
+          <div class="">
+            <img
+              class="w-[32px] h-[32px] border border-[#F1F2F4] rounded-full p-2"
+              src="Trash.png"
+            />
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
